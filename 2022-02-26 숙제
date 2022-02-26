@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>과제1-p229-float-layout</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        #wrap {
+            width: 1000px;
+            margin: 20px auto;
+            font-size: 24px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        header>article,
+        footer{
+            padding: 10px 0;
+            margin-bottom: 10px;
+            border: 1px solid #000;
+            box-sizing: border-box;
+        }
+        section::after {
+            display: block;
+            clear: both;
+            content: '';
+        }
+        section>article {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            float: left;
+            height: 400px;
+            margin-bottom: 10px;
+            border: 1px solid #000;
+            box-sizing: border-box;
+        }
+        section>article:first-child{
+            width: 300px;
+            margin-right: 10px;
+        }
+        section>article:last-child{
+            width: 690px;
+        }
+        footer {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <article>Header</article>
+            <article>Navigation</article>
+        </header>
+        <hr />
+
+        <section>
+            <article>Aside</article>
+            <article>Section</article>
+        </section>
+        <hr />
+
+        <footer>Footer</footer>
+    </div>
+</body>
+</html>
