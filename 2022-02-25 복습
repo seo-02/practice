@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>220225</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./../../HTMLCSS/css/reset.css">
+    <style>
+        #wrap {
+            width: 1000px;
+            margin: 30px auto 0;
+            font-family: 'Baskerville Old Face';
+            /* border: 1px solid #000; */
+        }
+        header {
+            height: 100px;
+            margin-bottom: 80px;
+            background-color: whitesmoke;
+        }
+        header>div>h1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 1000px;
+            text-align: center;
+        }
+        header>div>h1>a {
+            width: 200px;
+            height: 80px;
+            padding-top: 20px;
+            text-align: center;
+            line-height: 30px;
+            /* border: 1px solid #000; */
+            border-radius: 15px;
+            box-sizing:content-box;
+        }
+        header>ul{
+            display: flex;
+            margin-top: 15px;
+            padding-left: 22px;
+        }
+        header>ul>li{
+            display: block;
+            width: 1000px;
+            /* margin: 20px 0 ; */
+            text-align: center;
+        }
+        header>ul>li>a{
+            display: block;
+            width: 220px;
+            padding: 10px 0;
+            font-size: 22px;
+            letter-spacing: -1px;
+            /* border: 1px solid #000; */
+        }
+        header>ul>li>a:hover{
+            background: blanchedalmond;
+
+        }
+
+        section>div>p {
+            height: 500px;
+            padding: 20px;
+            text-align: center;
+
+            /* background-image: url(./heart.jpg); */
+            background-position: -50px -50px;
+            /* background-color: white; */
+            border: 1px solid gainsboro;
+            box-sizing: border-box;
+        }
+        section>div>p>button {
+            width: 100px;
+            height: 30px;
+            margin-top: 20px;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <div>
+                <h1><a href="#" target="_self">SONG<br />SEO-YEONG</a></h1>
+            </div>
+            <ul>
+                <li><a class="insta" href="https://www.instagram.com/l0ve2ome_/" target="_blank">INSTAGRAM</a></li>
+                <li><a class="blog" href="#" target="_blank">BLOG</a></li>
+                <li><a class="phone" href="tel:01098945199">PHONE</a></li>
+                <li><a class="email" href="ssong5199@kakao.com">E-MAIL</a></li>
+            </ul>
+        </header>
+        <hr />
+
+        <section>
+            <h2 class="sr-only">내용</h2>
+            <div>
+                <p>
+                    본문내용 <br />
+                    <button>BUTTON</button>
+                </p>
+                
+            </div>
+        </section>
+        <hr />
+
+        <footer>
+            <address class="text-center">Copyright 2022. Song Seo-yeong All rights reserved.</address>
+        </footer>
+    </div>
+
+    <script>
+        const $Btn = document.querySelector('button');
+        const $p = document.querySelector('p');
+        $Btn.addEventListener('click',()=>{
+            $p.innerHTML = '이번주도 끝!';
+        })
+    </script>
+</body>
+</html>
