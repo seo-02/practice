@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>220216</title>
+    <link rel="stylesheet" href="./../../HTMLCSS/css/reset.css">
+    <style>
+        #wrap {
+            width: 500px;
+            padding: 100px 0;
+            margin: 100px auto;
+            font-size: 13px;
+            text-align: center;
+            background-image: url(./그해우리는);
+            background-position: 0 -110px;
+            background-size: cover ;
+            background-repeat: no-repeat;
+            border-radius: 20px;
+        }
+        p.left,
+        p.right {
+            display: inline-block;
+            width: 150px;
+            height: 50px;
+            margin: 30px 0;
+            font-size: 20px;
+            line-height: 50px;
+            background-color: rgb(255,255,255,0.5);
+        }
+        p.heart {
+            display: inline;
+            color:red;
+            font-size: 18px;
+        }
+
+        button {
+            padding: 5px 40px;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: rgb(252, 155, 155);
+        }
+        button:active {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1>exchange</h1>
+        <p class="left">최웅</p>
+        <p class="heart">&hearts;</p>
+        <p class="right">국연수</p>
+        <br />
+        <button>click</button>
+    </div>
+
+    <script>
+        const $button = document.querySelector('button');
+        const arrColor = ['pink','orange','red','violet'];
+        
+        $button.addEventListener('click',function(){
+            const $left = document.querySelector('.left');
+            const $right = document.querySelector('.right');
+
+            //두가지 내용을 서로 교차
+            const empty = $left.textContent;
+            $left.textContent = $right.textContent;
+            $right.textContent = empty;
+            
+            //배열로 랜덤 색변경 
+            const color = Math.floor(Math.random()*arrColor.length);
+           
+            document.querySelector('.heart').style.color = arrColor[color];
+            
+        });
+
+    </script>
+</body>
+</html>
