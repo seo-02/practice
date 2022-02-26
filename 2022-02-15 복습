@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>220215</title>
+    <link rel="stylesheet" href="./../../HTMLCSS/css/reset.css">
+    <style>
+        body {
+            font-size: 13px;
+            font-family: 'Noto Sans CJK KR';
+            background-color: #fdfcf0
+        }
+
+        #wrap {
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        h1 {
+            display: inline-block;
+            width: 50%;
+            border-bottom: 1px solid yellowgreen;
+        }
+        figure {
+            padding-top: 40px;
+        }
+        img {
+            width: 200px;
+        }
+        ul {
+            padding: 30px 0;
+        }
+        button {
+            width: 100px;
+            height: 30px;
+            font-weight: 800;
+            border-radius: 5px;
+        }
+
+        p {
+            display: inline-block;
+            width: 100px;
+            height: 25px;
+        }
+        .good:active {
+            background-color: #f00;
+        }
+        .bad:active {
+            background-color: #00f;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="wrap">
+        <h1 class="text-center" onclick="msgFn('첫번째 클릭');"><a href="#">CLICK</a></h1>
+        <figure>
+            <img src="./../../뽑을거.jpg" alt="#"><br />
+            <figcatption>&lt; 서영졸업사진 &gt;</figcatption>
+        </figure>
+        <ul>
+            <li>아마도 2020년</li>
+            <li>우리학교 대표 photo spot</li>
+        </ul>
+        <p id="good_count">0</p>
+        <p id="bad_count">0</p>
+        <br />
+        <button class="good">Good</button>
+        <button class="bad">Bad</button>
+    </div>
+    
+    <script>
+        const msgFn = function(msg){
+            alert(msg);
+        };
+
+        const $goodNum = document.getElementById('good_count');
+        const $good = document.querySelector('.good');
+        $good.addEventListener('click',function(){
+            let countNum = Number($goodNum.textContent);
+            countNum++;
+            $goodNum.textContent = countNum;
+        });
+
+        const $badNum = document.getElementById('bad_count');
+        const $bad = document.querySelector('.bad');
+        $bad.addEventListener('click', function(){
+            if(confirm('정말..이요?')==true){
+            let countNum = Number($badNum.textContent);
+            countNum--;
+            $badNum.textContent = countNum;
+            }else{
+                alert('감사합니다');
+            }
+                        
+        });
+
+    </script>
+
+</body>
+</html>
