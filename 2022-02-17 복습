@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>220217</title>
+    <link rel="stylesheet" href="./../../HTMLCSS/css/reset.css">
+    <style>
+        #wrap {
+            width: 800px;
+            margin: 30px auto;
+            border: 1px solid #000;
+        }
+        h1 {
+            background-color: #fff;
+        }
+        p {
+            padding: 30px 0;
+            text-align: center; 
+            background-repeat: no-repeat;
+        }
+        button {
+            display: block;
+            padding: 10px 20px;
+            margin: 30px auto 40px;
+        }
+        button:hover {
+            background-color: pink;
+        }
+        button:active {
+            background-color: red;
+        }
+    </style>
+
+    <script>
+        window.addEventListener('DOMContentLoaded',function(){
+            const $button = document.querySelector('button');
+            const $ptag = document.querySelector('.true');
+
+            $button.addEventListener('click',function(){
+                $ptag.setAttribute('style','height:550px');
+    
+                $ptag.textContent = 'Tada-★'
+                $ptag.style.color= 'red';
+                $ptag.style.fontWeight= '900';
+                $ptag.style.fontSize= '26px';
+                $ptag.style.backgroundImage = 'url(./tada.jpg)';
+                $ptag.style.backgroundSize = 'contain';
+
+                document.body.style.backgroundImage = 'url(./heart.jpg)';
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <h1 class="text-center">2022년 02월 17일</h1>
+        <p class="true">뭐 나오게~</p>
+        <button>CLICK</button>
+    </div>
+</body>
+</html>
